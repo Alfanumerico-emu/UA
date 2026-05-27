@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cecilia Rodriguez | Uniformes Almendra</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* === RESET Y VARIABLES === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #ffffff; /* Texto blanco para contrastar con el fondo */
+            position: relative;
+        }
+
+        /* === FONDO === */
+        .bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('fondo_1.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+            /* OPACIDAD DEL FONDO: Aquí puedes modificar el 1 (100%) por 0.8, 0.5, etc. */
+            opacity: 1; 
+            
+            z-index: -1; /* Mantiene la imagen detrás del contenido */
+        }
+
+        /* Opcional: Una capa oscura suave si la imagen de fondo es muy clara y no deja leer el texto */
+        .bg-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3); /* Ajusta este valor si necesitas oscurecer el fondo */
+            z-index: -1;
+        }
+
+        /* === CONTENEDOR PRINCIPAL === */
+        .container {
+            width: 100%;
+            max-width: 480px; /* Ancho máximo para pantallas móviles */
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* === PERFIL Y TEXTOS === */
+        .profile-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%; /* Círculo perfecto */
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 5px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+        }
+
+        h2 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 5px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+        }
+
+        .since {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        /* === BOTONES (ESTILO MIDDLETON) === */
+        .links-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Espaciado entre botones */
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            background-color: #ffffff;
+            color: #1a1a1a; /* Texto oscuro/negro */
+            text-decoration: none;
+            padding: 16px 20px;
+            border-radius: 30px; /* Bordes redondeados tipo píldora */
+            font-size: 15px;
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px); /* Efecto de elevación */
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+        /* === ICONOS SVG === */
+        .btn svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            fill: currentColor; /* Hereda el color del texto (#1a1a1a) */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-image"></div>
+    <div class="bg-overlay"></div> <div class="container">
+        
+        <img src="foto_ceci.png" alt="Cecilia Rodriguez" class="profile-img">
+
+        <h1>Cecilia Rodriguez</h1>
+        <h2>Gerente | Uniformes almendra</h2>
+        <p>Uniformes y sastrería</p>
+        <p class="since">#desde 1985</p>
+
+        <div class="links-container">
+            
+            <a href="https://wa.me/523329507181" class="btn" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M16.6 14c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.7-.3-1.4-.7-2-1.2-.5-.5-1-1.1-1.4-1.7-.1-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.1.2-.3.2-.4.1-.2 0-.4 0-.5C10 9.5 9.4 8 9.3 7.8c-.2-.2-.3-.2-.5-.2h-.4c-.2 0-.5.1-.7.3-.3.3-.8.8-.8 2s.8 2.3 1 2.6c.1.2 1.7 2.8 4.3 3.8.6.2 1.1.4 1.5.5.5.2 1 .2 1.4.1.4-.1 1.3-.5 1.5-1 .2-.5.2-.9.1-1-.1-.1-.3-.2-.5-.3zM12 20.3c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.3.9.9-3.2-.2-.3c-.9-1.4-1.4-3-1.4-4.7 0-4.8 3.9-8.7 8.7-8.7s8.7 3.9 8.7 8.7-3.9 8.7-8.7 8.7zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5l-1.3 4.8 5-1.3c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/>
+                </svg>
+                WhatsApp
+            </a>
+
+            <a href="catalogo.pdf" class="btn" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+                </svg>
+                Nuestro catálogo
+            </a>
+
+            <a href="mailto:ventas@uniformesalmendra.com" class="btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+                Correo Ventas
+            </a>
+
+            <a href="mailto:almendrauniformesejecutivos@gmail.com" class="btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+                Correo Administración
+            </a>
+
+        </div>
+    </div>
+
+</body>
+</html>
