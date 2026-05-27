@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
 
     <style>
-        /* === RESET Y VARIABLES === */
         * {
             margin: 0;
             padding: 0;
@@ -23,11 +22,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            color: #ffffff; /* Texto blanco para contrastar con el fondo */
+            color: #ffffff;
             position: relative;
         }
 
-        /* === FONDO === */
         .bg-image {
             position: fixed;
             top: 0;
@@ -38,28 +36,23 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            
-            /* OPACIDAD DEL FONDO: Aquí puedes modificar el 1 (100%) por 0.8, 0.5, etc. */
-            opacity: .9; 
-            
-            z-index: -1; /* Mantiene la imagen detrás del contenido */
+            opacity: 1; 
+            z-index: -1;
         }
 
-        /* Opcional: Una capa oscura suave si la imagen de fondo es muy clara y no deja leer el texto */
         .bg-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.4); /* Ajusta este valor si necesitas oscurecer el fondo */
+            background: rgba(0, 0, 0, 0.3);
             z-index: -1;
         }
 
-        /* === CONTENEDOR PRINCIPAL === */
         .container {
             width: 100%;
-            max-width: 480px; /* Ancho máximo para pantallas móviles */
+            max-width: 480px;
             padding: 40px 20px;
             display: flex;
             flex-direction: column;
@@ -67,14 +60,21 @@
             text-align: center;
         }
 
-        /* === PERFIL Y TEXTOS === */
         .profile-img {
             width: 110px;
             height: 110px;
-            border-radius: 50%; /* Círculo perfecto */
+            border-radius: 50%;
             object-fit: cover;
             margin-bottom: 20px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            
+            /* ======================================================== */
+            /* MARCA PARA MOVER LA FOTO DENTRO DEL CÍRCULO              */
+            /* El primer valor (50%) mueve de izquierda a derecha.      */
+            /* El segundo valor (20%) mueve de arriba hacia abajo.      */
+            /* Cambia el 20% por 0%, 50%, o 100% para ver cómo se mueve.*/
+            /* ======================================================== */
+            object-position: 50% 20%; 
         }
 
         h1 {
@@ -106,12 +106,11 @@
             opacity: 0.9;
         }
 
-        /* === BOTONES (ESTILO MIDDLETON) === */
         .links-container {
             width: 100%;
             display: flex;
             flex-direction: column;
-            gap: 15px; /* Espaciado entre botones */
+            gap: 15px;
         }
 
         .btn {
@@ -120,10 +119,10 @@
             justify-content: center;
             width: 100%;
             background-color: #ffffff;
-            color: #1a1a1a; /* Texto oscuro/negro */
+            color: #1a1a1a;
             text-decoration: none;
             padding: 16px 20px;
-            border-radius: 30px; /* Bordes redondeados tipo píldora */
+            border-radius: 30px;
             font-size: 15px;
             font-weight: 600;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -131,28 +130,29 @@
         }
 
         .btn:hover {
-            transform: translateY(-3px); /* Efecto de elevación */
+            transform: translateY(-3px);
             box-shadow: 0 8px 15px rgba(0,0,0,0.2);
         }
 
-        /* === ICONOS SVG === */
         .btn svg {
             width: 20px;
             height: 20px;
             margin-right: 10px;
-            fill: currentColor; /* Hereda el color del texto (#1a1a1a) */
+            fill: currentColor;
         }
     </style>
 </head>
 <body>
 
     <div class="bg-image"></div>
-    <div class="bg-overlay"></div> <div class="container">
+    <div class="bg-overlay"></div>
+
+    <div class="container">
         
         <img src="foto_ceci.png" alt="Cecilia Rodriguez" class="profile-img">
 
         <h1>Cecilia Rodriguez</h1>
-        <h2>Gerente | Uniformes Almendra</h2>
+        <h2>Gerente | Uniformes almendra</h2>
         <p>Uniformes y sastrería</p>
         <p class="since">#desde 1985</p>
 
